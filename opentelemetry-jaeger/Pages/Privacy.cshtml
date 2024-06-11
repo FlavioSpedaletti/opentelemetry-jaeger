@@ -1,0 +1,14 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Carros com ano maior que 1990:</p>
+@{
+    foreach (var carro in Model.Carros)
+    {
+        <div>@carro.Nome - @carro.Marca - @carro.Ano</div>
+    }
+}
